@@ -1,0 +1,5 @@
+<form method="post" action="">{% csrf_token %}
+<button onclick="goBack()">Go Back</button>
+    Ola Investidor e Cliente! Insira o simbolo do ativo listado em bolsa para entender a potencial perda em 12 meses para cada 10 mil reais investidos {{ form.as_p }}
+    <input type="submit" value="Calcule Agora" /><p><b>exemplo: Para vale digite vale5 </b></p>
+</form>

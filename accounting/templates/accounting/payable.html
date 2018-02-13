@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% block content %}
+<h1>Razao</h1>
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+
+    <div class="d-none d-md-block text-uppercase">
+      <ul class="navbar-nav">
+        <li class="nav-item px-1 ">
+          <a class="nav-link" href="{% url 'home' %}">#econobilidade</a>
+          <td><select name="forma" onchange="location = this.value;">
+            <option value="">Selecione seu relatorio</option>
+           <option value="{% url 'GL' %}">Diario</option>
+           <option value="{% url 'BS' %}">Balanço</option>
+           <option value="{% url 'IS' %}">DRE</option>
+          </select></td>
+
+        </li>
+      </ul>
+    </div>
+    </nav>
+    </div>
+
+  </body>
+</html>
+
+<br>
+{{xls | safe}}
+
+
+{% endblock %}

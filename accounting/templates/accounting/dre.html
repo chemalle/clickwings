@@ -1,0 +1,610 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Income Statements</title>
+  </head>
+  <body>
+
+  </body>
+</html>
+
+{% load staticfiles %}
+
+<div class="d-none d-md-block text-uppercase">
+  <ul class="navbar-nav">
+    <li class="nav-item px-1 ">
+      <a class="nav-link" href="{% url 'home' %}">#econobilidade</a>
+      <td><select name="forma" onchange="location = this.value;">
+        <option value="">Selecione seu relatorio</option>
+       <option value="{% url 'GL' %}">Diario</option>
+       <option value="{% url 'BS' %}">Balanço</option>
+       <option value="{% url 'IS' %}">DRE</option>
+      </select></td>
+
+    </li>
+  </ul>
+</div>
+</nav>
+</div>
+
+<img src="{% static "images/brooklin_bridge.JPG" %}" height=450 width="100%" alt="My image"/>
+
+
+<br>
+
+
+
+<br>
+<br>
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 15">
+<link rel=File-List href="Pasta1.fld/filelist.xml">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+x\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<br><br>
+<div class="statements">
+
+
+
+
+    <style id="Pasta1_25124_Styles">
+    <!--table
+    	{mso-displayed-decimal-separator:"\,";
+    	mso-displayed-thousand-separator:"\.";}
+    @page
+    	{margin:.3in .28in .3in .28in;
+    	mso-header-margin:.12in;
+    	mso-footer-margin:.12in;}
+    .font5
+    	{color:black;
+    	font-size:12.0pt;
+    	font-weight:400;
+    	font-style:normal;
+    	text-decoration:none;
+    	font-family:Tahoma, sans-serif;
+    	mso-font-charset:0;}
+    .font6
+    	{color:black;
+    	font-size:8.0pt;
+    	font-weight:400;
+    	font-style:normal;
+    	text-decoration:none;
+    	font-family:Tahoma, sans-serif;
+    	mso-font-charset:0;}
+    tr
+    	{mso-height-source:auto;}
+    col
+    	{mso-width-source:auto;}
+    br
+    	{mso-data-placement:same-cell;}
+    .style18
+    	{mso-number-format:"_\(\0022R$\0022* \#\,\#\#0\.00_\)\;_\(\0022R$\0022* \\\(\#\,\#\#0\.00\\\)\;_\(\0022R$\0022* \0022-\0022??_\)\;_\(\@_\)";
+    	mso-style-name:Moeda;
+    	mso-style-id:4;}
+    .style0
+    	{mso-number-format:General;
+    	text-align:general;
+    	vertical-align:bottom;
+    	white-space:nowrap;
+    	mso-rotate:0;
+    	mso-background-source:auto;
+    	mso-pattern:auto;
+    	color:black;
+    	font-size:12.0pt;
+    	font-weight:400;
+    	font-style:normal;
+    	text-decoration:none;
+    	font-family:Calibri, sans-serif;
+    	mso-font-charset:0;
+    	border:none;
+    	mso-protection:locked visible;
+    	mso-style-name:Normal;
+    	mso-style-id:0;}
+    .style22
+    	{color:#44546A;
+    	font-size:15.0pt;
+    	font-weight:700;
+    	font-style:normal;
+    	text-decoration:none;
+    	font-family:Calibri, sans-serif;
+    	mso-font-charset:0;
+    	border-top:none;
+    	border-right:none;
+    	border-bottom:1.5pt solid #4472C4;
+    	border-left:none;
+    	mso-style-name:"Título 1";
+    	mso-style-id:16;}
+    td
+    	{mso-style-parent:style0;
+    	padding:0px;
+    	mso-ignore:padding;
+    	color:black;
+    	font-size:12.0pt;
+    	font-weight:400;
+    	font-style:normal;
+    	text-decoration:none;
+    	font-family:Calibri, sans-serif;
+    	mso-font-charset:0;
+    	mso-number-format:General;
+    	text-align:general;
+    	vertical-align:bottom;
+    	border:none;
+    	mso-background-source:auto;
+    	mso-pattern:auto;
+    	mso-protection:locked visible;
+    	white-space:nowrap;
+    	mso-rotate:0;}
+    .xl63
+    	{mso-style-parent:style22;
+    	color:#44546A;
+    	font-size:15.0pt;
+    	font-weight:700;
+    	text-align:center;
+    	vertical-align:top;
+    	border-top:none;
+    	border-right:none;
+    	border-bottom:1.5pt solid #4472C4;
+    	border-left:none;
+    	mso-protection:unlocked visible;}
+    .xl64
+    	{mso-style-parent:style18;
+    	color:#44546A;
+    	font-size:15.0pt;
+    	font-weight:700;
+    	mso-number-format:"_\(\0022R$\0022* \#\,\#\#0\.00_\)\;_\(\0022R$\0022* \\\(\#\,\#\#0\.00\\\)\;_\(\0022R$\0022* \0022-\0022??_\)\;_\(\@_\)";
+    	border-top:none;
+    	border-right:none;
+    	border-bottom:1.5pt solid #4472C4;
+    	border-left:none;}
+    .xl65
+    	{mso-style-parent:style0;
+    	color:white;
+    	font-size:11.0pt;
+    	font-weight:700;
+    	font-family:Arial, sans-serif;
+    	mso-font-charset:0;
+    	border-top:.5pt solid windowtext;
+    	border-right:none;
+    	border-bottom:.5pt solid windowtext;
+    	border-left:.5pt solid windowtext;
+    	background:#333333;
+    	mso-pattern:black none;}
+    .xl66
+    	{mso-style-parent:style0;
+    	color:white;
+    	font-size:10.0pt;
+    	font-family:Arial, sans-serif;
+    	mso-font-charset:0;
+    	border-top:.5pt solid windowtext;
+    	border-right:.5pt dotted gray;
+    	border-bottom:.5pt solid windowtext;
+    	border-left:none;
+    	background:#333333;
+    	mso-pattern:black none;}
+    .xl67
+    	{mso-style-parent:style18;
+    	color:white;
+    	font-size:10.0pt;
+    	font-weight:700;
+    	font-family:Arial, sans-serif;
+    	mso-font-charset:0;
+    	mso-number-format:"_\(\0022R$\0022* \#\,\#\#0\.00_\)\;_\(\0022R$\0022* \\\(\#\,\#\#0\.00\\\)\;_\(\0022R$\0022* \0022-\0022??_\)\;_\(\@_\)";
+    	text-align:center;
+    	border-top:.5pt solid windowtext;
+    	border-right:.5pt dotted gray;
+    	border-bottom:.5pt solid windowtext;
+    	border-left:.5pt dotted gray;
+    	background:#333333;
+    	mso-pattern:black none;
+    	mso-protection:unlocked visible;
+    	white-space:normal;}
+    .xl68
+    	{mso-style-parent:style0;
+    	color:windowtext;
+    	font-size:11.0pt;
+    	font-weight:700;
+    	font-family:Arial, sans-serif;
+    	mso-font-charset:0;
+    	mso-number-format:"\#\,\#\#0";
+    	text-align:center;
+    	border-top:.5pt solid windowtext;
+    	border-right:none;
+    	border-bottom:.5pt solid windowtext;
+    	border-left:.5pt dotted gray;
+    	mso-protection:unlocked visible;}
+    .xl69
+    	{mso-style-parent:style0;
+    	color:windowtext;
+    	font-size:11.0pt;
+    	font-weight:700;
+    	font-family:Arial, sans-serif;
+    	mso-font-charset:0;
+    	mso-number-format:"\#\,\#\#0";
+    	text-align:center;
+    	border-top:.5pt solid windowtext;
+    	border-right:.5pt dotted gray;
+    	border-bottom:.5pt solid windowtext;
+    	border-left:none;
+    	mso-protection:unlocked visible;}
+    .xl70
+    	{mso-style-parent:style18;
+    	color:windowtext;
+    	font-size:10.0pt;
+    	font-family:Arial, sans-serif;
+    	mso-font-charset:0;
+    	mso-number-format:"_\(\0022R$\0022* \#\,\#\#0\.00_\)\;_\(\0022R$\0022* \\\(\#\,\#\#0\.00\\\)\;_\(\0022R$\0022* \0022-\0022??_\)\;_\(\@_\)";
+    	border-top:none;
+    	border-right:.5pt dotted gray;
+    	border-bottom:.5pt solid windowtext;
+    	border-left:.5pt dotted gray;
+    	mso-protection:unlocked visible;}
+    .xl71
+    	{mso-style-parent:style0;
+    	color:windowtext;
+    	font-size:11.0pt;
+    	font-family:Arial, sans-serif;
+    	mso-font-charset:0;
+    	border-top:.5pt solid windowtext;
+    	border-right:none;
+    	border-bottom:none;
+    	border-left:.5pt solid windowtext;}
+    .xl72
+    	{mso-style-parent:style0;
+    	color:windowtext;
+    	font-size:11.0pt;
+    	font-weight:700;
+    	font-family:Arial, sans-serif;
+    	mso-font-charset:0;
+    	border-top:.5pt solid windowtext;
+    	border-right:none;
+    	border-bottom:none;
+    	border-left:none;}
+    .xl73
+    	{mso-style-parent:style18;
+    	color:windowtext;
+    	font-size:10.0pt;
+    	font-family:Arial, sans-serif;
+    	mso-font-charset:0;
+    	mso-number-format:"_\(\0022R$\0022* \#\,\#\#0\.00_\)\;_\(\0022R$\0022* \\\(\#\,\#\#0\.00\\\)\;_\(\0022R$\0022* \0022-\0022??_\)\;_\(\@_\)";
+    	border-top:.5pt solid gray;
+    	border-right:.5pt dotted gray;
+    	border-bottom:.5pt solid gray;
+    	border-left:.5pt dotted gray;
+    	mso-protection:unlocked visible;}
+    .xl74
+    	{mso-style-parent:style0;
+    	color:windowtext;
+    	font-size:11.0pt;
+    	font-family:Arial, sans-serif;
+    	mso-font-charset:0;
+    	border-top:none;
+    	border-right:none;
+    	border-bottom:none;
+    	border-left:.5pt solid windowtext;}
+    .xl75
+    	{mso-style-parent:style0;
+    	color:windowtext;
+    	font-size:11.0pt;
+    	font-weight:700;
+    	font-family:Arial, sans-serif;
+    	mso-font-charset:0;}
+    .xl76
+    	{mso-style-parent:style0;
+    	color:windowtext;
+    	font-size:11.0pt;
+    	font-weight:700;
+    	font-family:Arial, sans-serif;
+    	mso-font-charset:0;
+    	border-top:.5pt solid windowtext;
+    	border-right:none;
+    	border-bottom:.5pt solid windowtext;
+    	border-left:.5pt solid windowtext;
+    	background:silver;
+    	mso-pattern:black none;}
+    .xl77
+    	{mso-style-parent:style18;
+    	color:windowtext;
+    	font-size:10.0pt;
+    	font-weight:700;
+    	font-family:Arial, sans-serif;
+    	mso-font-charset:0;
+    	mso-number-format:"_\(\0022R$\0022* \#\,\#\#0\.00_\)\;_\(\0022R$\0022* \\\(\#\,\#\#0\.00\\\)\;_\(\0022R$\0022* \0022-\0022??_\)\;_\(\@_\)";
+    	border-top:.5pt solid windowtext;
+    	border-right:none;
+    	border-bottom:.5pt solid windowtext;
+    	border-left:none;
+    	background:silver;
+    	mso-pattern:black none;}
+    .xl78
+    	{mso-style-parent:style0;
+    	color:windowtext;
+    	font-size:10.0pt;
+    	font-weight:700;
+    	font-family:Arial, sans-serif;
+    	mso-font-charset:0;
+    	border-top:none;
+    	border-right:none;
+    	border-bottom:none;
+    	border-left:.5pt solid windowtext;}
+    .xl79
+    	{mso-style-parent:style0;
+    	color:windowtext;
+    	font-size:11.0pt;
+    	font-weight:700;
+    	font-family:Arial, sans-serif;
+    	mso-font-charset:0;
+    	mso-number-format:"\#\,\#\#0";
+    	border-top:none;
+    	border-right:.5pt dotted gray;
+    	border-bottom:.5pt solid windowtext;
+    	border-left:.5pt dotted gray;
+    	mso-protection:unlocked visible;}
+    .xl80
+    	{mso-style-parent:style18;
+    	color:windowtext;
+    	font-size:10.0pt;
+    	font-family:Arial, sans-serif;
+    	mso-font-charset:0;
+    	mso-number-format:"_\(\0022R$\0022* \#\,\#\#0\.00_\)\;_\(\0022R$\0022* \\\(\#\,\#\#0\.00\\\)\;_\(\0022R$\0022* \0022-\0022??_\)\;_\(\@_\)";
+    	border-top:none;
+    	border-right:none;
+    	border-bottom:.5pt solid windowtext;
+    	border-left:.5pt dotted gray;
+    	mso-protection:unlocked visible;}
+    .xl81
+    	{mso-style-parent:style0;
+    	color:windowtext;
+    	font-size:10.0pt;
+    	font-family:Arial, sans-serif;
+    	mso-font-charset:0;}
+    .xl82
+    	{mso-style-parent:style0;
+    	color:windowtext;
+    	font-size:11.0pt;
+    	font-family:Arial, sans-serif;
+    	mso-font-charset:0;
+    	mso-number-format:"\#\,\#\#0";
+    	border-top:.5pt solid gray;
+    	border-right:.5pt dotted gray;
+    	border-bottom:.5pt solid gray;
+    	border-left:.5pt dotted gray;
+    	mso-protection:unlocked visible;}
+    .xl83
+    	{mso-style-parent:style18;
+    	color:windowtext;
+    	font-size:10.0pt;
+    	font-family:Arial, sans-serif;
+    	mso-font-charset:0;
+    	mso-number-format:"_\(\0022R$\0022* \#\,\#\#0\.00_\)\;_\(\0022R$\0022* \\\(\#\,\#\#0\.00\\\)\;_\(\0022R$\0022* \0022-\0022??_\)\;_\(\@_\)";
+    	border-top:none;
+    	border-right:.5pt dotted gray;
+    	border-bottom:.5pt solid gray;
+    	border-left:.5pt dotted gray;
+    	mso-protection:unlocked visible;}
+    .xl84
+    	{mso-style-parent:style0;
+    	color:windowtext;
+    	font-size:11.0pt;
+    	font-weight:700;
+    	font-family:Arial, sans-serif;
+    	mso-font-charset:0;
+    	mso-number-format:Standard;
+    	border-top:.5pt solid windowtext;
+    	border-right:none;
+    	border-bottom:1.0pt solid windowtext;
+    	border-left:none;
+    	background:silver;
+    	mso-pattern:black none;}
+    .xl85
+    	{mso-style-parent:style18;
+    	color:windowtext;
+    	font-size:10.0pt;
+    	font-weight:700;
+    	font-family:Arial, sans-serif;
+    	mso-font-charset:0;
+    	mso-number-format:"_\(\0022R$\0022* \#\,\#\#0\.00_\)\;_\(\0022R$\0022* \\\(\#\,\#\#0\.00\\\)\;_\(\0022R$\0022* \0022-\0022??_\)\;_\(\@_\)";
+    	border-top:.5pt solid windowtext;
+    	border-right:none;
+    	border-bottom:1.0pt solid windowtext;
+    	border-left:none;
+    	background:silver;
+    	mso-pattern:black none;}
+    .xl86
+    	{mso-style-parent:style0;
+    	color:windowtext;
+    	font-size:11.0pt;
+    	font-weight:700;
+    	font-family:Arial, sans-serif;
+    	mso-font-charset:0;
+    	border-top:.5pt solid windowtext;
+    	border-right:none;
+    	border-bottom:.5pt solid windowtext;
+    	border-left:none;
+    	background:silver;
+    	mso-pattern:black none;}
+<br>
+
+
+    </style>
+    </head>
+
+    <body link="#0563C1" vlink="#954F72">
+
+
+    <div id="Pasta1_25124" align=center x:publishsource="Excel">
+
+    <table border=0 cellpadding=0 cellspacing=0 width=461 style='border-collapse:
+     collapse;table-layout:fixed;width:345pt'>
+     <col width=135 style='mso-width-source:userset;mso-width-alt:4309;width:101pt'>
+     <col width=219 style='mso-width-source:userset;mso-width-alt:6997;width:164pt'>
+     <col width=107 style='mso-width-source:userset;mso-width-alt:3413;width:80pt'>
+     <tr height=28 style='height:21.0pt'>
+     <br>
+     <br>
+
+      <td colspan=2 height=28 class=xl63 width=354 style='height:21.0pt;width:265pt'>Profit
+      &amp; Loss Statement</td>
+      <td class=xl64 width=107 style='width:80pt'>&nbsp;</td>
+     </tr>
+     <tr height=23 style='height:17.0pt'>
+      <td colspan=2 height=23 class=xl65 style='border-right:.5pt dotted gray;
+      height:17.0pt'>Year To Date</td>
+
+     </tr>
+     <tr height=21 style='height:16.0pt'>
+      <td colspan=2 height=21 class=xl68 style='border-right:.5pt dotted gray;
+      height:16.0pt'>Income</td>
+      <td class=xl70 style='border-left:none'>&nbsp;</td>
+     </tr>
+     <tr height=21 style='height:16.0pt'>
+      <td height=21 class=xl71 style='height:16.0pt;border-top:none'>&nbsp;</td>
+      <td class=xl72 style='border-top:none'>Total Sales</td>
+      <td class=xl73><span style='mso-spacerun:yes'> </span>R$ {{faturamento }} <a href="{% url 'Sales' %}" >details</a></td>
+     </tr>
+     <tr height=21 style='height:16.0pt'>
+      <td height=21 class=xl74 style='height:16.0pt'>&nbsp;</td>
+      <td class=xl75>Less taxes</td>
+      <td class=xl73 style='border-top:none'><span
+      style='mso-spacerun:yes'> </span>R$ {{taxes}}</td>
+     </tr>
+     <tr height=21 style='height:16.0pt'>
+      <td height=21 style='height:16.0pt'></td>
+      <td class=xl76>Total Net Income</td>
+      <td class=xl77><span style='mso-spacerun:yes'> </span>R$ {{ net_income }} </td>
+     </tr>
+     <tr height=21 style='height:16.0pt'>
+      <td height=21 style='height:16.0pt'></td>
+      <td class=xl78>Third party services</td>
+      <td class=xl73><span style='mso-spacerun:yes'> </span>R$ {{ cogs }} <a href="{% url 'COGS' %}" >details</a><span
+      style='mso-spacerun:yes'>               </span>-<span
+      style='mso-spacerun:yes'>   </span></td>
+     </tr>
+     <tr height=21 style='height:16.0pt'>
+      <td height=21 style='height:16.0pt'></td>
+      <td class=xl76>Gross Profit</td>
+      <td class=xl77><span style='mso-spacerun:yes'> </span>R$ {{ gross_profit }} </td>
+     </tr>
+     <tr height=21 style='height:16.0pt'>
+      <td height=21 style='height:16.0pt'></td>
+      <td class=xl79>Expenses</td>
+      <td class=xl80 style='border-left:none'><span
+      style='mso-spacerun:yes'>  </span></td>
+     </tr>
+     <tr height=21 style='height:16.0pt'>
+      <td height=21 class=xl81 style='height:16.0pt'></td>
+      <td class=xl82>General &amp; Administrative<span
+      style='mso-spacerun:yes'> </span></td>
+      <td class=xl83 align=center style='border-left:none'>R$ {{ general}} <a href="{% url 'GA' %}" >details</a></td>
+     </tr>
+     <tr height=21 style='height:16.0pt'>
+      <td height=21 class=xl81 style='height:16.0pt'></td>
+      <td class=xl82 style='border-top:none'>Sales and Administrative</td>
+      <td class=xl83 align=center style='border-left:none'>R$ {{ SGA }} <a href="{% url 'SGA' %}" >details</a></td>
+     </tr>
+     <tr height=21 style='height:16.0pt'>
+      <td height=21 class=xl81 style='height:16.0pt'></td>
+      <td class=xl82 style='border-top:none'>Management</td>
+      <td class=xl83 align=center style='border-left:none'>R$ {{ MGMT }} <a href="{% url 'MGMT' %}" >details</a></td>
+     </tr>
+     <tr height=21 style='height:16.0pt'>
+      <td height=21 class=xl81 style='height:16.0pt'></td>
+      <td class=xl82 style='border-top:none'>Amortization and Depreciation</td>
+      <td class=xl83 align=center style='border-left:none'>R$ {{ AMORTIZACAO }} <a href="{% url 'AMORTIZATION' %}" >details</a></td>
+     </tr>
+     <tr height=21 style='height:16.0pt'>
+      <td height=21 class=xl81 style='height:16.0pt'></td>
+      <td class=xl82 style='border-top:none'>Other Expenses</td>
+      <td class=xl83 align=center style='border-left:none'>R$ {{ FINANCE }} <a href="{% url 'FINANCE' %}" >details</a></td>
+     </tr>
+     <tr height=21 style='height:16.0pt'>
+      <td colspan=2 height=21 class=xl76 style='height:16.0pt'>Total Expenses</td>
+      <td class=xl77 align=center>R$ {{ ttl_expenses }}</td>
+     </tr>
+     <tr height=21 style='height:16.0pt'>
+      <td height=21 class=xl81 style='height:16.0pt'></td>
+      <td class=xl82 style='border-top:none'>Income Tax</td>
+      <td class=xl83 align=center style='border-left:none'>R$ {{ Income_Tax }} <a href="{% url 'IRPJ' %}" >details</a></td>
+     </tr>
+     <tr height=23 style='height:17.0pt'>
+      <td height=23 class=xl76 style='height:17.0pt;border-top:none'>Net Profit /
+      (Loss)</td>
+      <td class=xl84 style='border-top:none'>&nbsp;</td>
+      <td class=xl85 align=center style='border-top:none'>R$ {{ net_expenses }}</td>
+     </tr>
+     <![if supportMisalignedColumns]>
+     <tr height=0 style='display:none'>
+      <td width=135 style='width:101pt'></td>
+      <td width=219 style='width:164pt'></td>
+      <td width=107 style='width:80pt'></td>
+     </tr>
+     <![endif]>
+    </table>
+
+    <div style='mso-element:comment-list'><![if !supportAnnotations]>
+
+    <hr class=msocomhide align=left size=1 width="33%">
+
+    <![endif]>
+
+    <div style='mso-element:comment'><![if !supportAnnotations]>
+
+    <div id="_com_1" class=msocomtxt
+    onmouseover="msoCommentShow('_com_1','_anchor_1')"
+    onmouseout="msoCommentHide('_com_1')" language=JavaScript><![endif]>
+
+    <div><![if !supportAnnotations]><a class=msocomhide href="#_msoanchor_1"
+
+     <v:shapetype id="_x0000_t202" coordsize="21600,21600" o:spt="202" path="m,l,21600r21600,l21600,xe">
+      <v:stroke joinstyle="miter"/>
+      <v:path gradientshapeok="t" o:connecttype="rect"/>
+     </v:shapetype><v:shape id="_x0000_s1025" type="#_x0000_t202" style='position:absolute;
+      margin-left:210pt;margin-top:-203pt;width:110pt;height:32pt;z-index:1;
+      visibility:hidden' fillcolor="infoBackground" o:insetmode="auto">
+      <v:fill color2="infoBackground"/>
+      <v:shadow on="t" obscured="t"/>
+      <v:path o:connecttype="none"/>
+      <v:textbox style='mso-direction-alt:auto'/>
+      <x:ClientData ObjectType="Note">
+       <x:MoveWithCells/>
+       <x:SizeWithCells/>
+       <x:AutoFill>False</x:AutoFill>
+       <x:Row>1</x:Row>
+       <x:Column>2</x:Column>
+       <x:Author>OHallorK</x:Author>
+      </x:ClientData>
+     </v:shape></xml><![endif]--><![if !vml]><span style='mso-ignore:vglayout'><![endif]>
+
+    <![if !vml]></span><![endif]></div>
+
+    <![if !supportAnnotations]></div>
+
+    <![endif]></div>
+
+    </div>
+
+    </div>
+
+</div>
+
+
+  </body>
+</html>
+
+{% endblock %}

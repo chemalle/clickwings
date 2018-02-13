@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+{% block content %}
+
+<h1> Seus demonstrativos </h1>
+
+<td><select name="forma" onchange="location = this.value;">
+ <option value="{% url 'accountant' %}">Diario</option>
+ <option value="{% url 'statements_query' %}">Balanço</option>
+ <option value="Contact.php">DRE</option>
+</select></td>
+
+
+
+
+
+{% endblock content %}
